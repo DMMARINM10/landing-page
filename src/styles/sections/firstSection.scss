@@ -1,0 +1,81 @@
+.firstSection {
+    &_shape {
+        width: 100%;
+        background-color: $secondary;
+        // -webkit-clip-path: polygon(0% 0%,
+        //         100% 0%,
+        //         100% 550px,
+        //         0% 100%);
+        // clip-path: polygon(0% 0%,
+        //         100% 0%,
+        //         100% 550px,
+        //         0% 100%);
+        // clip-path: url('home');
+        // background-image: url('assets/images/sections/inicio-image.svg');
+    }
+
+    &_inside-shape {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: white
+    }
+
+    &_text-container {
+        height: 100%;
+        width: 40%;
+        padding: 0px 20px;
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &_img {
+        width: 50%;
+        max-width: 800px;
+        margin: 0px 20px
+    }
+
+    @media (max-width: 1008px) {
+        &_inside-shape {
+            flex-direction: column;
+        }
+
+        &_text-container {
+            height: 60%;
+            width: auto;
+            padding-bottom: 0px;
+        }
+
+        &_img {
+            width: auto;
+            height: 300px;
+        }
+    }
+
+    &_name-style {
+        color: transparent;
+        font-size: 46px;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #fff;
+
+    }
+
+    &_name-style-behind {
+        color: transparent;
+        font-size: 46px;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $secondary;
+
+    }
+
+    &_companies {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly
+    }
+}

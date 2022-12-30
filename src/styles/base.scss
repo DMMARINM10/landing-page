@@ -1,0 +1,102 @@
+//Colors
+$primary: #ff153c;
+$secondary: #282c38;
+$dark-primary: darken($color: $primary,
+        $amount: 15,
+    );
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", "Sen", sans-serif;
+    min-width: 750px;
+    background-color: #F3F0F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// texts
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 18px;
+}
+
+hr {
+    height: 2px;
+    background-color: gray; //TODO:
+    border: 0;
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+//buttons
+button {
+    width: fit-content;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    background-color: $primary;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+        background-color: $dark-primary;
+    }
+}
+
+//logo & images
+._logo-height {
+    height: 80px
+}
+
+// others
+._pointer {
+    cursor: pointer
+}
+
+// a {
+//     // transition: all 0.3s ease-out 0s;
+//     font-size: 18px;
+//     // font-weight: bold;
+// }
+
+// a,
+// a:focus,
+// a:hover {
+//     text-decoration: none;
+// }
+
+// a:focus,
+// input:focus,
+// textarea:focus,
+// button:focus,
+// .btn:focus,
+// .btn.focus,
+// .btn:not(:disabled):not(.disabled).active,
+// .btn:not(:disabled):not(.disabled):active {
+//     text-decoration: none;
+//     outline: none;
+//     box-shadow: none;
+// }
+// a {
+//     color: white;
+// }
+
+// i,
+// span,
+// a {
+//     display: inline-block;
+// }
+
+ul {
+    list-style-type: none;
+}

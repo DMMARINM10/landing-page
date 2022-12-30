@@ -1,0 +1,44 @@
+.header {
+    &_container {
+        display: flex;
+        padding: 0px 40px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    &_text-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%
+    }
+
+    &_menu-list {
+        display: flex;
+        max-width: 600px;
+        width: 60%;
+        min-width: fit-content;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    &_menu-logo {
+        display: none
+    }
+
+    @media (max-width: 840px) {
+        &_menu-logo {
+            display: block
+        }
+
+        &_menu-list {
+            display: none
+        }
+    }
+    
+    &_menu-item {
+        height: 50%;
+        align-items: center;
+    }
+}
