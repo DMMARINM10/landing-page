@@ -1,29 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+import { sectionsLanding } from '../data/data'
+import useWidth from '../hooks/useWidth'
 
-const FirstSection = ({ sections }) => {
-    const [width, setWidth] = useState(window.screen.width)
-    window.addEventListener("resize", (_) => {
-        const newWidth = window.screen.width
-        if (window.screen.width !== width) {
-            if (newWidth <= 782 && width !== 782) {
-                setWidth(782)
-                return
-            }
-            if (newWidth > 782) setWidth(newWidth)
-        }
+const sections = sectionsLanding
 
-    })
-    // useEffect(() => {
-    //     window
-    //       .matchMedia(`(max-width: ${max})`)
-    //       .addEventListener('change', (e) => setScreen(e.matches))
-    //   }, [])
+const FirstSection = () => {
+    const [width, setWidth] = useState(window.innerWidth)
+    useWidth(width, setWidth)
     const height = sections[1]?.height
     const shapeHeight = height * 0.78
-    //   const shape = `path("M 0 ${shapeHeight} Q ${width*0.086} ${shapeHeight*0.75} ${width*0.286} ${shapeHeight*0.875} Q ${width*0.57} ${shapeHeight} ${width*0.786} ${shapeHeight*0.375} Q ${width*0.857} ${shapeHeight*0.2} ${width} ${shapeHeight*0.2} L ${width} 0 L 0 0 z")`
     const shape = `path("M ${width} ${shapeHeight} Q ${width * 0.914} ${shapeHeight * 0.75} ${width * 0.714} ${shapeHeight * 0.875} Q ${width * 0.43} ${shapeHeight} ${width * 0.214} ${shapeHeight * 0.375} Q ${width * 0.143} ${shapeHeight * 0.2} 0 ${shapeHeight * 0.2} L 0 0 L ${width} 0 z")`
-    //   const polygon =  'polygon(0% 0%, 100% 0%, 100% 550px, 0% 100%)'
     const whiteHeight = height - shapeHeight
     return (
         <section id="inicio">
@@ -41,19 +27,16 @@ const FirstSection = ({ sections }) => {
                     <img className='firstSection_img' src='assets/images/sections/image.png' alt='Inicio' />
                 </div>
             </div>
-            <div style={{
-                width: '100%',
-                height: shapeHeight,
+            <div className='firstSection_content-behind' style={{
+                height: shapeHeight
             }}>
                 <div className='firstSection_inside-shape'>
-                    <div className='firstSection_text-container' style={{
-                        color: '#282c38'
-                    }}>
+                    <div className='firstSection_text-container firstSection_color-behind'>
                         <h1>El nuevo software para gestionar tus hoteles, <span className='firstSection_name-style-behind'>DAHU Hotels</span></h1>
                         <p>Bienvenido a nuestro sistema de gestión hotelera, la solución definitiva para agilizar y optimizar las operaciones de su hotel. Nuestro software basado en la nube está diseñado para ayudar a los hoteleros a gestionar todos los aspectos de su negocio, desde las reservas y las operaciones de recepción hasta la limpieza y el mantenimiento. Con nuestro sistema, puede aumentar la eficiencia, reducir costes y ofrecer una mejor experiencia a sus huéspedes.</p>
                         <button>Regístrate ahora</button>
                     </div>
-                        <img className='firstSection_img' src='assets/images/sections/image.png' alt='Inicio' />
+                    <img className='firstSection_img' src='assets/images/sections/image.png' alt='Inicio' />
                 </div>
             </div>
             <div className='firstSection_companies' style={{
@@ -66,7 +49,5 @@ const FirstSection = ({ sections }) => {
         </section>
     )
 }
-
-FirstSection.propTypes = {}
 
 export default FirstSection

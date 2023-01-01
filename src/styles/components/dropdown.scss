@@ -1,0 +1,27 @@
+.dropdown {
+
+    &_main-container {
+        width: 100%;
+        justify-content: center;
+        z-index: 1
+    }
+    
+    &_list-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #F3F0F5;
+        width: 80%;
+        padding: 30px;
+        border: 1px solid $gray-text
+    }
+    
+    &_item {
+        font-size: 20px;
+        overflow: hidden;
+    }
+                    
+    &_item-name {
+        cursor: pointer;
+        width: fit-content;
+    }
+}

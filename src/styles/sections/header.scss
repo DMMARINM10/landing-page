@@ -1,5 +1,15 @@
 .header {
+    &_main-container {
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end
+    }
+
     &_container {
+        background-color: $secondary;
         display: flex;
         padding: 0px 40px;
         justify-content: center;
@@ -27,18 +37,18 @@
         display: none
     }
 
+    &_menu-item {
+        height: 50%;
+        align-items: center;
+    }
+
     @media (max-width: 840px) {
         &_menu-logo {
-            display: block
+            display: flex
         }
 
         &_menu-list {
             display: none
         }
-    }
-    
-    &_menu-item {
-        height: 50%;
-        align-items: center;
     }
 }
