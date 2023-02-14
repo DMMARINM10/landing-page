@@ -1,0 +1,45 @@
+.forthSection {
+    &_img {
+        border-radius: 100px;
+        width: 180px;
+        height: 180px
+    }
+
+    &_p {
+        font-size: 16px;
+        color: gray;
+    }
+    
+    @media (max-width: 860px) {
+        &_img {
+            width: 120px;
+            height: 120px;
+        }
+
+        &_h2 {
+            font-size: 14px;
+        }
+    }
+    
+    @media (max-width: 990px) {
+        &_title {
+            font-size: 34px
+        }
+
+        &_h2 {
+            font-size: 18px;
+        }
+
+        &_p {
+            font-size: 12px;
+        }
+    }
+    
+    @media (max-width: 1080px) {
+        &_img {
+            width: 140px; 
+            height: 140px; 
+        }
+    }
+
+} 

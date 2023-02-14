@@ -1,0 +1,121 @@
+.thirdSection {
+
+    &_title {
+        margin-top: 200px;
+        color: white;
+    }
+
+    &_for {
+        .thirdSection_test:nth-of-type(2n+1) {
+            h1 {
+                font-size: 32px; 
+            }
+        }
+    }
+
+    
+    &_test {
+        background-color: white;
+        color: gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        padding: 0 10px;
+        
+    }
+    
+    &_test-1 {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        height: 35%;
+    }
+    
+    &_test-2 {
+        width: 90%;
+        height: 90%
+    }
+    
+    &_test-3 {
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    &_test-4 {
+        color: black;
+    }
+    
+    &_test-5 {
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    @media (max-width: 990px) {
+        &_title {
+            font-size: 34px
+        }
+    }
+    
+    @media (max-width: 1354px) {
+        &_test {
+            justify-content: center;
+            gap: 5%
+        }
+        
+        &_test-2 {
+            width: 70%; 
+            height: 70%; 
+        }
+        
+        &_test-3 { 
+            height: 80%;
+        }
+
+        &_for {
+            .thirdSection_test:nth-of-type(2n+1) {
+                h1 {
+                    font-size: 28px; 
+                }
+            }
+
+            .thirdSection_test:nth-of-type(2n) {
+                h1 {
+                    font-size: 34px; 
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 1176px) {
+        &_test-1 {
+            justify-content: center;
+        }
+        
+        &_test-2 {
+            display: none;
+        }
+        
+        &_test-3 {
+            align-items: center;
+        }
+
+        &_test-5 {
+            font-size: 14px;
+        }
+
+        &_test-6 {
+            font-size: 16px;
+        }
+    }
+    
+}
+
+                        
+                                // <h1 className=thirdSection_test-4 style={{
+                                // }}>${price}</h1>

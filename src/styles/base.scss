@@ -7,6 +7,15 @@ $medium-gray: #B2BBC9;
 $dark-primary: darken($color: $primary,
         $amount: 15,
     );
+$light-primary: lighten($color: $primary,
+        $amount: 35,
+    );
+$light-secondary: lighten($color: $secondary,
+        $amount: 10,
+    );
+$text-secondary: lighten($color: $secondary,
+        $amount: 20,
+    );
 
 html {
     scroll-behavior: smooth;
@@ -14,8 +23,8 @@ html {
 
 body {
     font-family: "Work Sans", "Sen", sans-serif;
-    min-width: 750px;
-    background-color: $background-gray;
+    min-width: 620px;
+    // background-color: $background-gray;
 }
 
 * {
@@ -36,15 +45,25 @@ p {
 //buttons
 button {
     width: fit-content;
-    padding: 15px 30px;
-    border-radius: 8px;
+    padding: 10px 30px;
+    border-radius: 12px;
     border: none;
     background-color: $primary;
     color: white;
     font-size: 20px;
     cursor: pointer;
+    // font-weight: bold;
     &:hover {
         background-color: $dark-primary;
+    }
+}
+
+.button-secondary {
+    border: 1px solid $primary;
+    background-color: white;
+    color: $primary;
+    &:hover {
+        background-color: $light-primary;
     }
 }
 
@@ -61,10 +80,10 @@ button {
 ul {
     list-style-type: none;
 }
+
 hr {
-    height: 2px;
-    background-color: $gray-text;
+    height: 1px;
+    background-color: $light-secondary;
     border: 0;
-    width: 50%;
-    margin-bottom: 25px;
+    width: 100%;
 }
