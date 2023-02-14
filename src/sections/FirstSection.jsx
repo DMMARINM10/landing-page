@@ -14,7 +14,8 @@ const FirstSection = () => {
             height,
         }}>
             <div className='firstSection_shape' style={{
-                paddingBottom: `calc(100% * 1 / ${svgRatio})`
+                paddingBottom: `calc(100% * 1 / ${svgRatio})`,
+                backgroundImage: `url('assets/images/backgroundImage/inicio.svg')`
             }}>
                 <div className='firstSection_inside-shape'>
                     <div className='firstSection_text-container'>

@@ -82,7 +82,7 @@ const SecondSection = () => {
                         justifyContent: 'center',
                         alignItems: 'center',
                         // backgroundRepeat: 'no-repeat',
-                        // backgroundImage: `url('assets/images/backgroundImage/funcionalidades-1.svg')`,
+                        backgroundImage: `url('assets/images/backgroundImage/funcionalidades-1.svg')`,
                         // display: 'flex',
                         // // justifyContent: 'center',
                         // alignItems: 'center'
@@ -93,14 +93,14 @@ const SecondSection = () => {
                             alignItems: 'flex-end',
                             height: '100%'
                         }}>
-
-                        </div> */}
+                        
+                    </div> */}
                         <img style={{
                             // marginLeft: '30px',
                             marginTop: `calc(100% * 1 / ${svgRatio*0.5})`,
                             // marginLeft: `5%`,
                             // justifySelf: 'center'
-                           
+                            
                         }} className='secondSection_first-img' src='assets/images/sections/mockup-1.png' alt='' />
                     </div>
                     <div className='secondSection_feature-column'>
@@ -118,26 +118,26 @@ const SecondSection = () => {
                         </div>
                         {/* <div className='secondSection_feature'>
                             <HotelOutlinedIcon sx={{ fontSize: 80, color: 'rgb(220, 68, 97)' }} />
-
+                            
                             <div>
-                                <h2>Recepción</h2>
-                                <p>Agilice las entradas y salidas, gestione los perfiles y solicitudes de los huéspedes y la asignación de habitaciones.</p>
+                            <h2>Recepción</h2>
+                            <p>Agilice las entradas y salidas, gestione los perfiles y solicitudes de los huéspedes y la asignación de habitaciones.</p>
                             </div>
-                        </div>
-                        <div className='secondSection_feature'>
+                            </div>
+                            <div className='secondSection_feature'>
                             <CleanHandsOutlinedIcon sx={{ fontSize: 80, color: 'rgb(63, 141, 146)' }} />
-
+                            
                             <div>
-                                <h2>Limpieza</h2>
-                                <p>Controle el estado de las habitaciones y comuníquese con el personal de limpieza a través del sistema.</p>
+                            <h2>Limpieza</h2>
+                            <p>Controle el estado de las habitaciones y comuníquese con el personal de limpieza a través del sistema.</p>
                             </div>
-                        </div>
-                        <div className='secondSection_feature'>
+                            </div>
+                            <div className='secondSection_feature'>
                             <HandymanOutlinedIcon sx={{ fontSize: 80, color: 'rgb(245, 192, 73)' }} />
-
+                            
                             <div>
-                                <h2>Mantenimiento</h2>
-                                <p>Gestione las solicitudes de mantenimiento y programe las tareas respectivas.</p>
+                            <h2>Mantenimiento</h2>
+                            <p>Gestione las solicitudes de mantenimiento y programe las tareas respectivas.</p>
                             </div>
                         </div> */}
                     </div>
@@ -163,11 +163,11 @@ const SecondSection = () => {
                             <CurrencyExchangeOutlinedIcon sx={{ fontSize: 80, color: 'rgb(185, 41, 222)' }} />
                             
                             <div>
-                                <h2>Reservas</h2>
-                                <p>Gestione las reservas de habitaciones, los planes de tarifas y la disponibilidad en tiempo real.</p>
+                            <h2>Reservas</h2>
+                            <p>Gestione las reservas de habitaciones, los planes de tarifas y la disponibilidad en tiempo real.</p>
                             </div>
-                        </div>
-                        <div className='secondSection_feature'>
+                            </div>
+                            <div className='secondSection_feature'>
                             <InsertChartOutlinedSharpIcon sx={{ fontSize: 80, color: 'rgb(39, 93, 172)' }} />
                             
                             <div>
@@ -181,6 +181,7 @@ const SecondSection = () => {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
+                        backgroundImage: `url('assets/images/backgroundImage/funcionalidades-2.svg')`,
                     }}>
                         <img style={{
                             marginTop: `calc(100% * 1 / ${svgRatio*0.5})`,
