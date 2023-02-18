@@ -11,3 +11,14 @@ export const capitalizedText = (text) => {
     const finalText = wordsCapitalized.join(' ')
     return finalText
 }
+
+//Format price
+export const formatPrice = (price) => {
+	const newPrice = new window.Intl.NumberFormat('en-EN', {
+        style: 'currency',
+        currency: 'USD',
+        maximumFractionDigits: 0
+    }).format(price)
+
+    return newPrice
+}
