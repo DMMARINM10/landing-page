@@ -2,83 +2,59 @@
 
     &_shape {
         width: 100%;
-        // background-color: red;
-        background-image: url('assets/images/backgroundImage/inicio.svg');
         background-size: cover;
         height: 0;
         padding: 0;
-        /* reset */
-        padding-bottom: calc(100% * 1 / 2.2);
-        
         background-repeat: no-repeat;
     }
 
     &_inside-shape {
-        // height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
         color: white;
-        // gap: 5px
-        // background-color: blue;
+
+        img {
+            height: 40%;
+            width: 40%;
+            margin: 0px 20px;
+        }
     }
 
     &_text-container {
         height: fit-content;
         width: 40%;
         padding: 20px;
-        // padding-bottom: 100px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         justify-content: space-evenly;
-        // background-color: yellow;
         gap: 15px;
+
+        h1 {
+            align-self: flex-start;
+        }
+
+        span {
+            color: transparent;
+            font-size: 46px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #fff;
+        }
+
+        button {
+            margin-top: 25px;
+        }
     }
-
-    // &_color-behind {
-    //     color: $secondary
-    // }
-
-    &_img {
-        height: 40%;
-        width: 40%;
-        // max-width: 800px;
-        margin: 0px 20px;
-        // background-color: yellow;
-    }
-
-
-    &_name-style {
-        color: transparent;
-        font-size: 46px;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #fff;
-    }
-
-    // &_name-style-behind {
-    //     color: transparent;
-    //     font-size: 46px;
-    //     -webkit-text-fill-color: transparent;
-    //     -webkit-text-stroke-width: 1px;
-    //     -webkit-text-stroke-color: $secondary;
-    // }
-
-    // &_companies {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: space-evenly
-    // }
-
-    // &_content-behind {
-    //     width: 100%
-    // }
 
     @media (max-width: 1240px) {
         &_inside-shape {
             flex-direction: column;
-            
+
+            img {
+                width: 350px;
+            }
         }
 
         &_text-container {
@@ -86,40 +62,29 @@
             width: 80%;
             padding-bottom: 0px;
         }
-
-        &_img {
-            width: 350px;
-        }
     }
 
     @media (max-width: 1000px) {
-
         &_text-container {
             width: 90%;
             gap: 5px;
             
             h1 {
                 font-size: 40px;
-
             }
 
             span {
                 font-size: 40px;
             }
         }
-
-        &_img {
-            // width: 25%;
-            // margin-top: -30px;
-        }
     }
 
     @media (max-width: 780px) {
         &_text-container {
             width: 100%;
+
             h1 {
                 font-size: 35px;
-
             }
 
             span {
@@ -128,55 +93,20 @@
         }
     }
 
-    @media (max-width: 740px) {
-        &_shape {
-            // padding-bottom: calc(100% * 1 / 1.5);
-        }
-        // &_text-container {
-        //     width: 100%;
-        //     h1 {
-        //         font-size: 35px;
-
-        //     }
-
-        //     span {
-        //         font-size: 35px;
-        //     }
-        // }
-    }
-
-    @media (max-width: 617px) {
-        &_shape {
-            // padding-bottom: calc(100% * 1 / 1.1);
-        }
-        // &_text-container {
-        //     width: 100%;
-        //     h1 {
-        //         font-size: 35px;
-
-        //     }
-
-        //     span {
-        //         font-size: 35px;
-        //     }
-        // }
-    }
-
     @media (min-width: 1960px) {
         &_inside-shape {
             align-items: flex-start;
-        }
 
-        &_img {
-            width: 800px;
+            img {
+                width: 800px;
+            }
         }
 
         &_text-container {
-            // background-color: purple;
             width: 50%; 
+
             h1 {
                 font-size: 52px;
-
             }
 
             span {
@@ -189,18 +119,7 @@
             
             button {
                 font-size: 28px;
-
             }
-        }
-    }
-
-    @media (min-width: 2373px) {
-        &_shape {
-            // padding-bottom: calc(100% * 1 / 2.7);
-        }
-
-        &_text-container {
-            // padding-bottom: 5%;
         }
     }
 }

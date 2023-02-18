@@ -19,19 +19,15 @@ const FirstSection = () => {
             }}>
                 <div className='firstSection_inside-shape'>
                     <div className='firstSection_text-container'>
-                        <h1 style={{
-                            alignSelf: 'flex-start'
-                        }}>El nuevo software para gestionar tus hoteles, <span className='firstSection_name-style'>DAHU Hotels</span></h1>
+                        <h1>El nuevo software para gestionar tus hoteles, <span>DAHU Hotels</span></h1>
                         <p>Bienvenido a nuestro sistema de gestión hotelera, nuestro software basado en la nube la solución definitiva para agilizar y optimizar las operaciones de su hotel.</p>
-                        <button style={{
-                            marginTop: '25px'
-                        }}>Regístrate ahora</button>
+                        <button>Regístrate ahora</button>
                     </div>
-                    <img className='firstSection_img' src='assets/images/sections/image.png' alt='Inicio' />
+                    <img src='assets/images/sections/image.png' alt='Inicio' />
                 </div>
             </div>
         </section>
     )
 }
 
-export default FirstSection //proptypes
+export default FirstSection
