@@ -182,6 +182,7 @@ const SecondSection = () => {
                         justifyContent: 'center',
                         alignItems: 'center',
                         backgroundImage: `url('assets/images/backgroundImage/funcionalidades-2.svg')`,
+                        backgroundPositionX: 'right'
                     }}>
                         <img style={{
                             marginTop: `calc(100% * 1 / ${svgRatio*0.5})`,

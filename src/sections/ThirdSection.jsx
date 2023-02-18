@@ -60,7 +60,7 @@ const ThirdSection = props => {
                             return (
                                 <div key={i} className='thirdSection_test' style={{
                                     width: i !== 1 ? '25%' :'28%',
-                                    // backgroundColor: 'white',
+                                    // backgroundColor: 'red',
                                     height: i === 1 ? '550px' : '480px',
                                     // color: 'gray',
                                     // display: 'flex',

@@ -1,0 +1,96 @@
+// #integraciones {
+    .primer-gap {
+        gap: 12%
+    }
+
+    .segundo-gap {
+        gap: 17%
+    }
+
+    .fifthSection_img-1:nth-of-type(2n+1) {
+        // img {
+
+            width: 160px;
+            height: 160px;
+        // }
+    }
+
+    .fifthSection_img-1:nth-of-type(2n) {
+        // img {
+
+            width: 140px;
+            height: 140px;
+        // }
+    }
+
+    .fifthSection_img-2 {
+        // img {
+
+            width: 140px;
+            height: 140px;
+        // }
+    }
+
+    @media (max-width: 1255px) {
+        .fifthSection_img-1:nth-of-type(2n+1) {
+            // img {
+    
+                width: 140px;
+                height: 140px;
+            // }
+        }
+    
+        .fifthSection_img-1:nth-of-type(2n) {
+            // img {
+    
+                width: 120px;
+                height: 120px;
+            // }
+        }
+    
+        .fifthSection_img-2 {
+            // img {
+    
+                width: 120px;
+                height: 120px;
+            // }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .fifthSection_img-1:nth-of-type(2n+1) {
+            // img {
+    
+                width: 120px;
+                height: 120px;
+            // }
+        }
+    
+        .fifthSection_img-1:nth-of-type(2n) {
+            // img {
+    
+                width: 100px;
+                height: 100px;
+            // }
+        }
+    
+        .fifthSection_img-2 {
+            // img {
+    
+                width: 100px;
+                height: 100px;
+            // }
+        }
+    }
+
+    @media (max-width: 848px) {
+        .primer-gap {
+            gap: 8%;
+        }
+
+        .segundo-gap {
+            gap: 10%;
+        }
+    }
+    // width={index !== 1 ? 160 : 140} height={index !== 1 ? 160 : 140}
+// }

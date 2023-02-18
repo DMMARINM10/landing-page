@@ -7,14 +7,16 @@ import ForthSection from './sections/ForthSection';
 import FifthSection from './sections/FifthSection';
 import useWidth from './hooks/useWidth';
 import { createContext } from 'react';
+import UpButton from './components/UpButton';
 export const ScreenContext = createContext(null);
 
 const App = () => {
 	const width = useWidth()
 	return (
 		<ScreenContext.Provider value={width}>
-			<div>
+			<div id='container'>
 				<Header />
+				<UpButton />
 				<FirstSection />
 				<SecondSection />
 				<ThirdSection />

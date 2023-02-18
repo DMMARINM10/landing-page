@@ -16,8 +16,9 @@ const FifthSection = props => {
     const firstIntegrations = integrations.slice(0, integrationHalf)
     const secondIntegrations = integrations.slice(integrationHalf, lengthIntegrations)
     return (
-            <section id='integraciones' style={{
-                height
+            <section style={{
+                height,
+                // backgroundColor: 'yellow'
                 // overflow: 'hidden'
             }}>
                 <div style={{
@@ -41,52 +42,61 @@ const FifthSection = props => {
                     // backgroundPositionY: 'top',
                     // backgroundColor: 'blue',
                     // backgroundColor: 'yellow',
-                    gap: '80px'
+                    gap: '120px'
                 }}>
-                    <h1 style={{
-                    marginTop: '180px'
+                    {/* <div style={{
+                        // height: '200px',
+                        // width: '100px',
+                        // position: 'absolute',
+                        backgroundColor: 'red'
+                    }}></div> */}
+                    <h1 id='integraciones' style={{
+                    marginTop: '160px',
+                    paddingTop: '20px'
                     }}>Integraciones</h1>
-                    <div style={{
+                    <div className='primer-gap' style={{
                         display: 'flex',
                         justifyContent: 'center',
                         width: '100%',
                         // height: 'fit-content',
-                        gap: '12%'
+                        // gap: '12%'
                         // marginLeft: '-20%'
                     }}>
                         {
                             firstIntegrations.map((int, index) => {
                                 const { name, logo } = int
                                 return (
-                                    <img style={{
+                                    <img className='fifthSection_img-1' style={{
                                         borderRadius: '100px',
                                         boxShadow: '0px 0px 10px 8px rgba(0, 0, 0, 0.15)',
                                         // marginRight: '45%',
                                         marginTop: index === 1 ? '100px' : '',
-                                        backgroundColor: 'white'
-                                    }} width={index !== 1 ? 160 : 140} height={index !== 1 ? 160 : 140} key={index} src={logo} alt={name} />
+                                        backgroundColor: 'white',
+                                        // width: 160,
+                                        // height: 160,
+                                    }} key={index} src={logo} alt={name} />
                                 )
                             })
                         }
                     </div>
-                    <div style={{
+                    <div className='segundo-gap' style={{
                         display: 'flex',
                         justifyContent: 'center',
                         width: '100%',
-                        gap: '17%'
+                        // gap: '17%'
                         // marginLeft: '-45%'
                     }}>
                         {
                             secondIntegrations.map((int, index) => {
                                 const { name, logo } = int
                                 return (
-                                    <img style={{
+                                    <img className='fifthSection_img-2' style={{
                                         borderRadius: '100px',
                                         boxShadow: '0px 0px 10px 8px rgba(0, 0, 0, 0.15)',
                                         // marginRight: '45%',
                                         marginTop: index === 1 || index === 2 ? '-80px' : '',
                                         backgroundColor: 'white'
-                                    }} width={140} height={140} key={index} src={logo} alt={name} />
+                                    }} key={index} src={logo} alt={name} />
                                 )
                             })
                         }

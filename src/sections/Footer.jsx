@@ -44,14 +44,19 @@ const Footer = () => {
                 </div>
                 <div style={{
                     display: 'flex',
-                    gap: '50px' //TODO:
+                    // backgroundColor: 'yellow',
+                    // opacity: '0.5',
+                    textAlign: 'center',
+                    gap: '5%' //TODO:
                 }}>
                     {
                         footer.map((list, i) => {
                             const { title, items } = list
                             return (
                                 <div key={`${i}-${title}`} className='footer_list'>
-                                    <h4>{capitalizedWord(title)}</h4>
+                                    <h4 style={{
+                                        color: 'white'
+                                    }}>{capitalizedWord(title)}</h4>
                                     <ul>
                                         {
                                             items.map((item, index) => {

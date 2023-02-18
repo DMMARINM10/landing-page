@@ -21,14 +21,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%
+        width: 100%;
+        margin-right: 3%
     }
 
     &_menu-list {
         display: flex;
         max-width: 600px;
-        width: 60%;
-        min-width: fit-content;
+        gap: 3%;
+        // width: 60%;
+        // min-width: fit-content;
         justify-content: space-between;
         align-items: center
     }
@@ -38,8 +40,17 @@
     }
 
     &_menu-item {
+        // font-weight: bold;
+        // color: white;
         height: 50%;
         align-items: center;
+        border-bottom: 3px solid transparent;
+        color: white;
+        &:hover {
+            border-bottom: 3px solid #ff153c;
+            color: #ff153c;
+            font-weight: bold;
+        }
     }
 
     @media (max-width: 840px) {

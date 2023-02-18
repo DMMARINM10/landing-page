@@ -80,7 +80,6 @@ export const pricing = [
         benefits: [
             'Proident do deserunt ipsum',
             'Proident do deserunt ipsum',
-            'Proident do deserunt ipsum',
         ]
     },
 ]
@@ -152,7 +151,7 @@ export const footer = [
         items: [
             'nosotros',
             'contáctanos',
-            'términos & condiciones'
+            'términos'
         ]
     },
     {
@@ -160,7 +159,7 @@ export const footer = [
         items: [
             'nosotros',
             'contáctanos',
-            'términos & condiciones'
+            'términos'
         ]
     },
 ]

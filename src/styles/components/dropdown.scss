@@ -3,10 +3,11 @@
     &_main-container {
         width: 100%;
         justify-content: center;
-        z-index: 1
+        z-index: 1;
     }
     
     &_list-container {
+        border-radius: 0 0px 15px 15px;
         display: flex;
         flex-direction: column;
         background-color: #F3F0F5;
@@ -23,5 +24,13 @@
     &_item-name {
         cursor: pointer;
         width: fit-content;
+        border-bottom: 3px solid transparent;
+        color: gray;
+
+        &:hover {
+            border-bottom: 3px solid #ff153c;
+            color: #ff153c;
+            font-weight: bold;
+        }
     }
 }
