@@ -15,10 +15,8 @@ const Header = () => {
     dropdown(list, setList)
 
     const height = sections[0].height
-    const totalSections = sections.length
 
     const props = {
-        // currentSection,
         setList
     }
 
@@ -30,14 +28,13 @@ const Header = () => {
 
     return (
         <div className='header_main-container'>
-            <header className='header_container' style={{
+            <header style={{
                 height
             }}>
                 <div className='header_text-container'>
                     <img className='_logo-height' src="assets/images/logo/dahu.png" alt="Logo" />
                     {
                         !list && (
-
                             <div className='header_menu-logo' onClick={() => setList(true)}>
                                 <MenuIcon sx={iconStyle} />
                             </div>
@@ -52,16 +49,15 @@ const Header = () => {
                     }
                     <ul className='header_menu-list'>
                         {
-                            sections.map((sec, i) => {
-                                const headerSection = i === 0 || i === totalSections - 1
+                            sections.map((sec, _) => {
                                 const item = sec.name
                                 return (
-                                    <li className='header_menu-item' key={item}
-                                        style={{
-                                            display: !headerSection ? 'flex' : 'none',
-                                            
-                                        }}>
-                                        <p className='_pointer' onClick={() => scrollToElement(item)}>{capitalizedWord(item)}</p>
+                                    <li key={item}>
+                                        <p className='_pointer' 
+                                            onClick={() => scrollToElement(item)}
+                                        >
+                                            {capitalizedWord(item)}
+                                        </p>
                                     </li>
                                 )
                             })
