@@ -16,20 +16,13 @@ const Dropdown = ({ setList }) => {
         <div className='header_menu-logo dropdown_main-container' style={{
             marginBottom: -heightDropdown
         }}>
-            <ul className='dropdown_list-container'>
+            <ul>
                 {
                     sections.map((sec, i) => {
                         const name = sec.name
-                        if (i === 0 || i === lengthSection - 1) return
                         return (
-                            <li key={i} className='dropdown_item' style={{
-                                height: i === lengthSection - 2 ? '30px' : '40px'
-                            }}>
-                                <div className='dropdown_item-name' style={{
-                                    // borderBottom: `3px solid ${selectedSection ? '#ff153c' : 'transparent'}`,
-                                    // color: `${selectedSection ? '#ff153c' : 'gray'}`,
-                                    // fontWeight: `${selectedSection ? 'bold' : 'lighter'}`
-                                }} onClick={() => scrollTo(name)}>
+                            <li key={i}>
+                                <div onClick={() => scrollTo(name)}>
                                     {capitalizedWord(name)}
                                 </div>
                             </li>
@@ -42,7 +35,6 @@ const Dropdown = ({ setList }) => {
 }
 
 Dropdown.propTypes = {
-    // currentSection: PropTypes.string.isRequired,
     setList: PropTypes.func.isRequired,
 }
 
