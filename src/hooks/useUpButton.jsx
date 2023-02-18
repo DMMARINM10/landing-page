@@ -9,7 +9,7 @@ const useUpButton = () => {
 		const scrollEvent = window.scrollY;
 		if (scrollEvent < firstSection) {
 			if (!topSection) setTopSection(true)
-		} else if (scrollEvent >= firstSection) {
+		} else {
 			if (topSection) setTopSection(false)
 		}
 	})

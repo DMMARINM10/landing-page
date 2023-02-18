@@ -7,30 +7,18 @@ const UpButton = () => {
     const upButton = useUpButton()
     const height = window.innerHeight
     return (
-        <div style={{
-            backgroundColor: 'red',
-            display: 'flex',
-            width: '100%',
-            justifyContent: 'flex-end',
-            position: 'sticky',
-            top: '120px'
-        }}>
-{
-
-        
-            upButton && (
-                
-                <div className='upButton_icon' style={{
-                    // bottom: -height + 150
-                    right: '54px',
-                    top: height - 150
-                }} onClick={scrollTop}>
-                <KeyboardArrowUpOutlinedIcon sx={{ fontSize: 50 }} />
-                </div>
-            )
-        }
+        <div className='upButton_container'>
+            {
+                upButton && (
+                    <div style={{
+                        top: height - 150
+                    }} onClick={scrollTop}>
+                        <KeyboardArrowUpOutlinedIcon sx={{ fontSize: 50 }} />
                     </div>
-        
+                )
+            }
+        </div>
+
     )
 }
 
