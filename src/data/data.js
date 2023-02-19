@@ -5,7 +5,7 @@ export const sectionsLanding = [
     },
     {
         name: 'inicio',
-        height: 700 //TODO: offset 100 menor a 1610px
+        height: 700
     },
     {
         name: 'funcionalidades',
@@ -13,15 +13,15 @@ export const sectionsLanding = [
     },
     {
         name: 'precios',
-        height: 800 //TODO:
+        height: 800
     },
     {
         name: 'equipo',
-        height: 600 //TODO: example
+        height: 600
     },
     {
         name: 'integraciones',
-        height: 900 //TODO:
+        height: 900
     },
     {
         name: 'footer',

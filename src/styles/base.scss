@@ -3,7 +3,6 @@ $primary: #ff153c;
 $secondary: #282c38;
 $gray-text: gray;
 $background-gray: #F3F0F5;
-$medium-gray: #B2BBC9;
 $dark-primary: darken($color: $primary,
         $amount: 15,
     );
@@ -60,6 +59,7 @@ button {
     color: white;
     font-size: 20px;
     cursor: pointer;
+
     &:hover {
         background-color: $dark-primary;
     }
@@ -69,6 +69,7 @@ button {
     border: 1px solid $primary;
     background-color: white;
     color: $primary;
+
     &:hover {
         background-color: $light-primary;
     }

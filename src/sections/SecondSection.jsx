@@ -87,7 +87,7 @@ const SecondSection = () => {
                     }}>
                         <img style={{
                             marginTop
-                        }} className='secondSection_second-img' src='assets/images/backgroundImage/charts.png' alt='charts' />
+                        }} className='secondSection_second-img' src='assets/images/sections/charts.png' alt='charts' />
                     </div>
                 </div>
             </div>
