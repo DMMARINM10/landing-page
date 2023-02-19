@@ -35,6 +35,4 @@ const ForthSection = () => {
     )
 }
 
-ForthSection.propTypes = {}
-
 export default ForthSection
