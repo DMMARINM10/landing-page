@@ -16,47 +16,24 @@ const Footer = () => {
             height
         }}>
             <div className='footer_first-row'>
-                <div style={{
-                    // marginTop: '-20px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '8px',
-
-                }}>
+                <div className='footer_logo-section'>
                     <img width={180} className='_logo-height' src='assets/images/logo/dahu.png' alt='Dahu Hotels' />
-                    <div style={{
-                        // textAlign: 'center'
-                        display: 'flex',
-                        gap: '8px',
-                        // backgroundColor: 'blue',
-                        // textAlign: 'center'
-                    }}><LocalPhoneIcon sx={{ fontSize: 20 }}/> +57 (123) 456-7890</div>
-                    <div style={{
-                        // textAlign: 'center'
-                        display: 'flex',
-                        gap: '8px',
-                        // backgroundColor: 'blue',
-                        // textAlign: 'center'
-                    }}><EmailIcon sx={{ fontSize: 20 }}/> <a style={{
-                        textDecoration: 'none',
-                        color: 'white'
-                    }} href='mailto:contacto@dahulabs.com'>contacto@dahulabs.com</a></div>
+                    <div>
+                        <LocalPhoneIcon sx={{ fontSize: 20 }} /> 
+                        +57 (123) 456-7890
+                    </div>
+                    <div>
+                        <EmailIcon sx={{ fontSize: 20 }} /> 
+                        <a href='mailto:contacto@dahulabs.com'>contacto@dahulabs.com</a>
+                    </div>
                 </div>
-                <div style={{
-                    display: 'flex',
-                    // backgroundColor: 'yellow',
-                    // opacity: '0.5',
-                    textAlign: 'center',
-                    gap: '5%' //TODO:
-                }}>
+                <div className='footer_info-section'>
                     {
                         footer.map((list, i) => {
                             const { title, items } = list
                             return (
-                                <div key={`${i}-${title}`} className='footer_list'>
-                                    <h4 style={{
-                                        color: 'white'
-                                    }}>{capitalizedWord(title)}</h4>
+                                <div key={`${i}-${title}`}>
+                                    <h4>{capitalizedWord(title)}</h4>
                                     <ul>
                                         {
                                             items.map((item, index) => {
@@ -71,19 +48,8 @@ const Footer = () => {
                         })
                     }
                 </div>
-                {/* <div className='footer_list footer_subscribe'>
-                    <h4>Suscríbete</h4>
-                    <div className='footer_subscribe-text'>Ingresa tu email para estar al día con lo que DAHU HOTELS tiene para ti.</div>
-                </div>
-                <div className='footer_input-container'>
-                    <input className='footer_input'
-                        type='email'
-                        placeholder='Ingresa tu email'
-                    />
-                    <button>Enviar</button>
-                </div> */}
             </div>
-            <hr className='footer_hr' />
+            <hr />
             <div className='footer_second-row'>
                 <div className='footer_copyright'>
                     <CopyrightOutlinedIcon /> <span>DAHU HOTELS. Todos los derechos reservados.</span>
