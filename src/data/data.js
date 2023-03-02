@@ -90,11 +90,11 @@ export const team = [
         name: 'daniel reyes',
         position: 'CEO'
     },
-    {
-        img: 'assets/images/team/HumbertoN.jpg',
-        name: 'humberto ariza',
-        position: 'CTO'
-    },
+    // {
+    //     img: 'assets/images/team/HumbertoN.jpg',
+    //     name: 'humberto ariza',
+    //     position: 'CTO'
+    // },
     {
         img: 'assets/images/team/CarlosM.jpeg',
         name: 'carlos marin',
