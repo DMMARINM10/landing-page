@@ -1,7 +1,10 @@
 import React from 'react'
 import CopyrightOutlinedIcon from '@mui/icons-material/CopyrightOutlined';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import { sectionsLanding } from '../data/data';
+import { footer, sectionsLanding } from '../data/data';
+import { capitalizedWord } from '../helpers/textUtils';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import EmailIcon from '@mui/icons-material/Email';
 
 const sections = sectionsLanding
 
@@ -13,35 +16,40 @@ const Footer = () => {
             height
         }}>
             <div className='footer_first-row'>
-                <img className='_logo-height' src='assets/images/logo/dahu.png' alt='Dahu Hotels' />
-                <div className='footer_list'>
-                    <h4>Productos</h4>
-                    <ul>
-                        <li>Clientes</li>
-                        <li>Documentos</li>
-                    </ul>
+                <div className='footer_logo-section'>
+                    <img width={180} className='_logo-height' src='assets/images/logo/dahu.png' alt='Dahu Hotels' />
+                    <div>
+                        <LocalPhoneIcon sx={{ fontSize: 20 }} /> 
+                        +57 (123) 456-7890
+                    </div>
+                    <div>
+                        <EmailIcon sx={{ fontSize: 20 }} /> 
+                        <a href='mailto:contacto@dahulabs.com'>contacto@dahulabs.com</a>
+                    </div>
                 </div>
-                <div className='footer_list'>
-                    <h4>Compañía</h4>
-                    <ul>
-                        <li>Nosotros</li>
-                        <li>Contáctanos</li>
-                        <li>Términos</li>
-                    </ul>
-                </div>
-                <div className='footer_list footer_subscribe'>
-                    <h4>Suscríbete</h4>
-                    <div className='footer_subscribe-text'>Ingresa tu email para estar al día con lo que DAHU HOTELS tiene para ti.</div>
-                </div>
-                <div className='footer_input-container'>
-                    <input className='footer_input'
-                        type='email'
-                        placeholder='Ingresa tu email'
-                    />
-                    <button>Enviar</button>
+                <div className='footer_info-section'>
+                    {
+                        footer.map((list, i) => {
+                            const { title, items } = list
+                            return (
+                                <div key={`${i}-${title}`}>
+                                    <h4>{capitalizedWord(title)}</h4>
+                                    <ul>
+                                        {
+                                            items.map((item, index) => {
+                                                return (
+                                                    <li key={index}>{capitalizedWord(item)}</li>
+                                                )
+                                            })
+                                        }
+                                    </ul>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
-            <hr className='footer_hr'/>
+            <hr />
             <div className='footer_second-row'>
                 <div className='footer_copyright'>
                     <CopyrightOutlinedIcon /> <span>DAHU HOTELS. Todos los derechos reservados.</span>

@@ -4,33 +4,25 @@ import { capitalizedWord } from '../helpers/textUtils'
 import { sectionsLanding } from '../data/data'
 import { scrollToElement } from '../helpers/scroll'
 
-const Dropdown = ({ currentSection, setDropdown }) => {
+const Dropdown = ({ setList }) => {
     const sections = sectionsLanding
     const lengthSection = sections.length
     const heightDropdown = (lengthSection - 3) * 40 + 92
     const scrollTo = (id) => {
-        setDropdown(false)
+        setList(false)
         scrollToElement(id)
     }
     return (
         <div className='header_menu-logo dropdown_main-container' style={{
             marginBottom: -heightDropdown
         }}>
-            <ul className='dropdown_list-container'>
+            <ul>
                 {
                     sections.map((sec, i) => {
                         const name = sec.name
-                        const selectedSection = currentSection === name
-                        if (i === 0 || i === lengthSection - 1) return
                         return (
-                            <li key={i} className='dropdown_item' style={{
-                                height: i === lengthSection - 2 ? '30px' : '40px'
-                            }}>
-                                <div className='dropdown_item-name' style={{
-                                    borderBottom: `3px solid ${selectedSection ? '#ff153c' : 'transparent'}`,
-                                    color: `${selectedSection ? '#ff153c' : 'gray'}`,
-                                    fontWeight: `${selectedSection ? 'bold' : 'lighter'}`
-                                }} onClick={() => scrollTo(name)}>
+                            <li key={i}>
+                                <div onClick={() => scrollTo(name)}>
                                     {capitalizedWord(name)}
                                 </div>
                             </li>
@@ -43,8 +35,7 @@ const Dropdown = ({ currentSection, setDropdown }) => {
 }
 
 Dropdown.propTypes = {
-    currentSection: PropTypes.string.isRequired,
-    setDropdown: PropTypes.func.isRequired,
+    setList: PropTypes.func.isRequired,
 }
 
 export default Dropdown

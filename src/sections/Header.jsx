@@ -3,76 +3,61 @@ import { capitalizedWord } from '../helpers/textUtils'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import Dropdown from '../components/Dropdown'
-import UpButton from '../components/UpButton';
 import { sectionsLanding } from '../data/data';
-import useCurrentSection from '../hooks/useCurrentSection';
-import useDropdown from '../hooks/useDropdown';
+import { dropdown } from '../helpers/dropdown';
 import { scrollToElement } from '../helpers/scroll';
 
 const sections = sectionsLanding
 
 const Header = () => {
-    const [upButton, setUpButton] = useState(false)
-    const [currentSection, setCurrentSection] = useState('inicio')
-    const [dropdown, setDropdown] = useState(false)
-    useDropdown(dropdown, setDropdown)
-	useCurrentSection(sections, currentSection, setCurrentSection)
-    const firstSectionName = sections[1].name
-    if (currentSection !== firstSectionName) {
-        if (!upButton) setUpButton(true)
-    } else {
-        if (upButton) setUpButton(false)
-    }
+    
+    const [list, setList] = useState(false)
+    dropdown(list, setList)
 
-    const heightHeader = sections[0].height
-    const totalSections = sections.length
+    const height = sections[0].height
 
     const props = {
-        currentSection,
-        setDropdown
+        setList
     }
+
     const iconStyle = {
         fontSize: 34,
         cursor: 'pointer',
         color: 'white'
     }
+
     return (
         <div className='header_main-container'>
-            <header className='header_container' style={{
-                height: heightHeader
+            <header style={{
+                height
             }}>
                 <div className='header_text-container'>
                     <img className='_logo-height' src="assets/images/logo/dahu.png" alt="Logo" />
                     {
-                        !dropdown && (
-
-                            <div className='header_menu-logo' onClick={() => setDropdown(true)}>
+                        !list && (
+                            <div className='header_menu-logo' onClick={() => setList(true)}>
                                 <MenuIcon sx={iconStyle} />
                             </div>
                         )
                     }
                     {
-                        dropdown && (
-                            <div className='header_menu-logo' onClick={() => setDropdown(false)}>
+                        list && (
+                            <div className='header_menu-logo' onClick={() => setList(false)}>
                                 <CloseOutlinedIcon sx={iconStyle} />
                             </div>
                         )
                     }
                     <ul className='header_menu-list'>
                         {
-                            sections.map((sec, i) => {
-                                const headerSection = i === 0 || i === totalSections - 1
+                            sections.map((sec, _) => {
                                 const item = sec.name
-                                const selectedSection = currentSection === item
                                 return (
-                                    <li className='header_menu-item' key={item}
-                                        style={{
-                                            display: !headerSection ? 'flex' : 'none',
-                                            borderBottom: `3px solid ${selectedSection ? '#ff153c' : 'transparent'}`,
-                                            color: `${selectedSection ? '#ff153c' : 'white'}`,
-                                            fontWeight: `${selectedSection ? 'bold' : 'lighter'}`
-                                        }}>
-                                        <p className='_pointer' onClick={() => scrollToElement(item)}>{capitalizedWord(item)}</p>
+                                    <li key={item}>
+                                        <p className='_pointer' 
+                                            onClick={() => scrollToElement(item)}
+                                        >
+                                            {capitalizedWord(item)}
+                                        </p>
                                     </li>
                                 )
                             })
@@ -81,13 +66,8 @@ const Header = () => {
                 </div>
             </header >
             {
-                dropdown && (
+                list && (
                     <Dropdown {...props} />
-                )
-            }
-            {
-                upButton && (
-                    <UpButton />
                 )
             }
         </div>

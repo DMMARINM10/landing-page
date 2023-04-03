@@ -3,9 +3,17 @@ $primary: #ff153c;
 $secondary: #282c38;
 $gray-text: gray;
 $background-gray: #F3F0F5;
-$medium-gray: #B2BBC9;
 $dark-primary: darken($color: $primary,
         $amount: 15,
+    );
+$light-primary: lighten($color: $primary,
+        $amount: 35,
+    );
+$light-secondary: lighten($color: $secondary,
+        $amount: 10,
+    );
+$text-secondary: lighten($color: $secondary,
+        $amount: 20,
     );
 
 html {
@@ -14,7 +22,10 @@ html {
 
 body {
     font-family: "Work Sans", "Sen", sans-serif;
-    min-width: 750px;
+    width: 100%;
+    min-width: 620px;
+    display: flex;
+    justify-content: center;
     background-color: $background-gray;
 }
 
@@ -22,6 +33,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+#container {
+    max-width: 2000px;
+    background-color: white;
 }
 
 // texts
@@ -36,15 +52,26 @@ p {
 //buttons
 button {
     width: fit-content;
-    padding: 15px 30px;
-    border-radius: 8px;
+    padding: 10px 30px;
+    border-radius: 12px;
     border: none;
     background-color: $primary;
     color: white;
     font-size: 20px;
     cursor: pointer;
+
     &:hover {
         background-color: $dark-primary;
+    }
+}
+
+.button-secondary {
+    border: 1px solid $primary;
+    background-color: white;
+    color: $primary;
+
+    &:hover {
+        background-color: $light-primary;
     }
 }
 
@@ -61,10 +88,10 @@ button {
 ul {
     list-style-type: none;
 }
+
 hr {
-    height: 2px;
-    background-color: $gray-text;
+    height: 1px;
+    background-color: $light-secondary;
     border: 0;
-    width: 50%;
-    margin-bottom: 25px;
+    width: 100%;
 }
