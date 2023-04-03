@@ -86,24 +86,19 @@ export const pricing = [
 
 export const team = [
     {
-        img: 'assets/images/team/DanielN.jpg',
-        name: 'daniel reyes',
-        position: 'CEO'
-    },
-    // {
-    //     img: 'assets/images/team/HumbertoN.jpg',
-    //     name: 'humberto ariza',
-    //     position: 'CTO'
-    // },
-    {
-        img: 'assets/images/team/CarlosM.jpeg',
-        name: 'carlos marin',
-        position: 'CPO'
+        img: 'https://variety.com/wp-content/uploads/2021/05/Batman_Caped_Crusader2C_COLOR-e1621372528477.jpg',
+        name: 'batman',
+        position: 'superhero'
     },
     {
-        img: 'assets/images/team/DannaM-foto.jpeg',
-        name: 'danna marin',
-        position: 'SSR Frontend Developer'
+        img: 'https://i.pinimg.com/564x/0c/85/b8/0c85b8989726d275133cb48e40064fdc--joker-batman-the-joker.jpg',
+        name: 'joker',
+        position: 'villain'
+    },
+    {
+        img: 'https://pm1.narvii.com/6117/dd2702e6cb67950fd89b71becf997427ce955acc_hq.jpg',
+        name: 'robin',
+        position: 'superhero'
     },
 ]
 
